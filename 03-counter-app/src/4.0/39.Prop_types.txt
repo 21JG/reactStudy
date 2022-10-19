@@ -1,0 +1,62 @@
+//PrimeraApp
+import React, { Fragment } from 'react';
+import PropTypes from 'prop-types';
+
+
+const PrimeraApp =({ voy }) =>{
+    
+    const emer ='camilo campeon';
+
+   
+    
+//console.log(props);
+
+    return( 
+    //otro tipo de fragemtn 
+    
+        // <div>
+    // <Fragment>
+        <>
+    {/* <pre> { JSON.stringify( emer, null, 3) } </pre> */}
+    {/* <h1>{emer}</h1> */}
+    <h1> {voy} </h1>
+    <p>ahhhhh</p>
+    
+        </>
+    );
+    // </Fragment> 
+// </div>
+// otro tipo de fragment 
+
+    
+}
+//no se pq pero no puede Prop sino que prop
+PrimeraApp.propTypes = {
+    voy:PropTypes.string.isRequired,
+    amo:PropTypes.number
+
+}
+
+
+export default PrimeraApp;
+
+//index
+import React from "react";
+import ReactDom from 'react-dom'
+import PrimeraApp from './PrimeraApp' 
+import './index.css'
+
+//console.log('hola mundo');
+
+
+
+// const saludo = <h1>Hola Mundo</h1>;
+
+//console.log (saludo);
+
+const divRoot = document.querySelector('#roote');
+
+//console.log(divRoot);
+
+// ReactDom.render( saludo,divRoot );
+ReactDom.render( <PrimeraApp />,divRoot );
